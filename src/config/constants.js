@@ -1,0 +1,3 @@
+export let EVENT = {
+  UPDATE_GITHUB_USER: 'UPDATE_GITHUB_USER'
+}

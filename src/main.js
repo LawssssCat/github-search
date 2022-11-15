@@ -12,4 +12,8 @@ Vue.use(BootstrapVueIcons)
 
 new Vue({
   render: h => h(App),
+  beforeCreate() {
+    // 消息总线
+    Vue.prototype.$bus = this;
+  }
 }).$mount('#app')

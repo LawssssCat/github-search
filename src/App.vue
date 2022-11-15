@@ -1,19 +1,19 @@
 <template>
   <div class="container">
     <GithubSearch></GithubSearch>
-    <UserList></UserList>
+    <GithubUserList></GithubUserList>
   </div>
 </template>
 
 <script>
 import GithubSearch from './components/GithubSearch.vue';
-import UserList from './components/UserList.vue'
+import GithubUserList from './components/GithubUserList.vue'
 
 export default {
   name: 'App',
   components: {
     GithubSearch,
-    UserList,
+    GithubUserList,
   }
 }
 </script>
