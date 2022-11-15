@@ -20,9 +20,25 @@ export default {
   },
   methods: {
     searchUsers() {
-      axios.get(`https://api.github.com/search/users?q=${this.inputName}`)
-      .then((response) => {
-        this.$bus.$emit(EVENT.UPDATE_GITHUB_USER, response.data.items);
+      let config = {
+        baseURL: 'https://api.github.com/search/',
+        url: '/users',
+        method: 'get',
+        params: {
+          q: this.inputName
+        }
+      }
+      this.$bus.$emit(EVENT.LOADING_GITHUB_USER, config);
+      axios(config).then((response) => {
+        this.$bus.$emit(EVENT.UPDATE_GITHUB_USER, {
+          isOk: true,
+          userList: response.data.items
+        });
+      },(error) => {
+        this.$bus.$emit(EVENT.UPDATE_GITHUB_USER, {
+          isOk: false,
+          errorMsg: error.message
+        });
       });
     }
   },
