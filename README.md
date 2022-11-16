@@ -1,24 +1,7 @@
 # github-search
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![image](https://user-images.githubusercontent.com/18041500/202063319-335a1310-6c5d-422b-86db-921350363402.png)
